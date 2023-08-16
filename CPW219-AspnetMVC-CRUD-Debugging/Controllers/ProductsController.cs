@@ -76,6 +76,7 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Controllers
         {
             var product = await _context.Product.FindAsync(id);
             _context.Product.Remove(product);
+            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
