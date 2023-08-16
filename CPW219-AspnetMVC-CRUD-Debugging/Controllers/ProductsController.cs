@@ -29,7 +29,6 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Controllers
             if (ModelState.IsValid)
             {
                 await _context.AddAsync(product);
-                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
